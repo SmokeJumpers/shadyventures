@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import { getPitch } from './services/api.js';
+import api from './services/api.js';
 
 export default {
   methods: {
     handleSubmit() {
-      getPitch();
+      api.getPitch();
     }
   }
 }
