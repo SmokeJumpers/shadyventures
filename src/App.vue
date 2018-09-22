@@ -14,7 +14,8 @@ import api from './services/api.js';
 export default {
   methods: {
     handleSubmit() {
-      api.getPitch();
+      const pitch = api.getPitch();
+      console.log(pitch);
     }
   }
 }
