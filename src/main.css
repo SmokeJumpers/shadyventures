@@ -12,6 +12,11 @@ button:hover {
 }
 
 h1 {
+  font-size: 4em;
   font-family: 'Creepster', cursive;
+}
+
+h2, h3 {
+  font-size: 2.5em;
 }
 
