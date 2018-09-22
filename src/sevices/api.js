@@ -124,6 +124,35 @@ const pitchParts = {
     'futurists',
     'celebrities',
     'workaholics'
+  ],
+
+  domain: [
+    '.cab',
+    '.eco',
+    '.bargains',
+    '.kinder',
+    '.dog',
+    '.mormon',
+    '.mom',
+    '.consulting',
+    '.wedding',
+    '.dating',
+    '.ventures',
+    '.rich',
+    '.farm',
+    '.ceo',
+    '.codes',
+    '.active',
+    '.country',
+    '.legal',
+    '.press',
+    '.ninja',
+    '.rip',
+    '.secure',
+    '.storage',
+    '.technology',
+    '.vip',
+    '.work'
   ]
 };
 
@@ -132,6 +161,8 @@ export default {
     const { techSite, newIdea, audience } = pitchParts;
     const { prefix, suffix } = sites;
 
+// Victor's proposed format below
+// url: `${prefix[0]}${suffix[0]}.${audience[0]}${newIdea[0]}.${domain[0]}`,
 
     return {
       url: `${prefix[0]}.${audience[0]}${newIdea[0]}.${suffix[0]}`,
