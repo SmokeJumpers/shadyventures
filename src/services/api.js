@@ -128,15 +128,27 @@ const pitchParts = {
   ]
 };
 
+function getNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; 
+}
+
 export default {
   getPitch() {
     const { techSite, newIdea, audience } = pitchParts;
     const { prefix, suffix } = sites;
 
+    const techIndex = getNumber(0, techSite.length);
+    const ideaIndex = getNumber(0, newIdea.length);
+    const audienceIndex = getNumber(0, audience.length);
+
+    const prefixIndex = getNumber(0, prefix.length);
+    const suffixIndex = getNumber(0, suffix.length);
 
     return {
-      url: `${prefix[0]}.${audience[0]}${newIdea[0]}.${suffix[0]}`,
-      pitch: `It/'s ${techSite[0]}, but ${newIdea[0]} for  ${audience[0]}`
+      url: `${prefix[prefixIndex]}.${audience[audienceIndex]}${newIdea[ideaIndex]}.${suffix[suffixIndex]}`,
+      pitch: `It's ${techSite[techIndex]}, but ${newIdea[ideaIndex]} for  ${audience[audienceIndex]}`
     }
   }
 };
