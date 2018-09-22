@@ -100,107 +100,107 @@ const pitchParts = {
   audience: [
     {
       audience: 'cab drivers',
-      domain: '.cab'
+      domain: 'cab'
     },
     {
       audience: 'zoo animals',
-      domain: '.eco'
+      domain: 'eco'
     },
     {
       audience: 'the elderly',
-      domain: '.bargains'
+      domain: 'bargains'
     },
     {
       audience: 'small children',
-      domain: '.kinder'
+      domain: 'kinder'
     },
     {
       audience: 'dogs',
-      domain: '.dog'
+      domain: 'dog'
     },
     {
       audience: 'mormons',
-      domain: '.mormon'
+      domain: 'mormon'
     },
     {
       audience: 'single parents',
-      domain: '.mom'
+      domain: 'mom'
     },
     {
       audience: 'lobbyists',
-      domain: '.consulting'
+      domain: 'consulting'
     },
     {
       audience: 'newlyweds',
-      domain: '.wedding'
+      domain: 'wedding'
     },
     {
       audience: 'hot singles in your area',
-      domain: '.dating'
+      domain: 'dating'
     },
     {
       audience: 'disruptors',
-      domain: '.ventures'
+      domain: 'ventures'
     },
     {
       audience: 'the 1%',
-      domain: '.rich'
+      domain: 'rich'
     },
     {
       audience: 'vegans',
-      domain: '.farm'
+      domain: 'farm'
     },
     {
       audience: 'teenage CEOs',
-      domain: '.ceo'
+      domain: 'ceo'
     },
     {
       audience: 'developers',
-      domain: '.codes'
+      domain: 'codes'
     },
     {
       audience: 'fitness enthusiasts',
-      domain: '.active'
+      domain: 'active'
     },
     {
       audience: 'rural americans',
-      domain: '.country'
+      domain: 'country'
     },
     {
       audience: 'lawyers',
-      domain: '.legal'
+      domain: 'legal'
     },
     {
       audience: 'journalists',
-      domain: '.press'
+      domain: 'press'
     },
     {
       audience: 'B-List superheroes',
-      domain: '.ninja'
+      domain: 'ninja'
     },
     {
       audience: 'the recently deceased',
-      domain: '.rip'
+      domain: 'rip'
     },
     {
       audience: 'the paranoid',
-      domain: '.secure'
+      domain: 'secure'
     },
     {
       audience: 'packrats',
-      domain: '.storage'
+      domain: 'storage'
     },
     {
       audience: 'futurists',
-      domain: '.technology'
+      domain: 'technology'
     },
     {
       audience: 'celebrities',
-      domain: '.vip'
+      domain: 'vip'
     },
     {
       audience: 'workaholics',
-      domain: '.work'
+      domain: 'work'
     }
   ]
 };
@@ -229,7 +229,7 @@ export default {
 
     return {
       url: `${prefix[prefixIndex]}${suffix[suffixIndex]}.${removeSpaces(audience[audienceIndex].audience)}${removeSpaces(newIdea[ideaIndex])}.${audience[audienceIndex].domain}`,
-      pitch: `It's ${techSite[techIndex]}, but ${newIdea[ideaIndex]} for ${audience[audienceIndex].audience}`
+      pitc: `It's ${techSite[techIndex]}, but ${newIdea[ideaIndex]} for ${audience[audienceIndex].audience}`
     }
   }
 };
