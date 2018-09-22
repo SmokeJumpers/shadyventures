@@ -31,10 +31,5 @@ export default {
 <style>
   header {
     width: 100vw;
-    max-height: 50vh;
-  }
-  
-  .banner {
-    background
   }
 </style>
