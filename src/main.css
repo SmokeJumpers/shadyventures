@@ -1,0 +1,17 @@
+#app {
+  text-align: center;
+}
+button {
+  padding: 10px;
+  border: 2px solid red;
+  color: red;
+}
+
+button:hover {
+  background-color: rgba(255, 0, 0, 0.214);
+}
+
+h1 {
+  font-family: 'Creepster', cursive;
+}
+

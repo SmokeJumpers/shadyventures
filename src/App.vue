@@ -6,7 +6,7 @@
     </header>
     <button @click="handleSubmit">Generate Your Shady Busniess Idea</button>
     <h2 v-if="pitch">Your website is: {{ pitch.url }}</h2>
-    <p v-if="pitch"> Your pitch is: {{ pitch.pitch }}</p>
+    <h3 v-if="pitch"> Your pitch is: {{ pitch.pitch }}</h3>
   </div>
 </template>
 
@@ -22,7 +22,6 @@ export default {
   methods: {
     handleSubmit() {
       this.pitch = api.getPitch();
-      console.log(this.pitch);
     }
   }
 }
@@ -37,7 +36,11 @@ export default {
     width: 100%;
   }
 
-  div h2, div p, div button {
-    margin: 0 auto;
+  h2 {
+    margin-top: 30px;
+  }
+
+  h3 {
+    margin-bottom: 50px;
   }
 </style>
