@@ -79,7 +79,7 @@ const pitchParts = {
     'like Tinder',
     'hard to use',
     'edible',
-    '100% local and organic',
+    'completely local and organic',
     'fluffy',
     'really slow',
     'a jukebox musical',
@@ -98,33 +98,110 @@ const pitchParts = {
   ],
 
   audience: [
-    'kids',
-    'cab drivers',
-    'zoo animals',
-    'the elderly',
-    'small children',
-    'dogs',
-    'mormons',
-    'single parents',
-    'lobbyists',
-    'newlyweds',
-    'hot singles in your area',
-    'disruptors',
-    'the 1%',
-    'vegans',
-    'teenage CEOs',
-    'developers',
-    'fitness enthusiasts',
-    'rural americans',
-    'lawyers',
-    'journalists',
-    'B-List superheroes',
-    'the recently deceased',
-    'the paranoid',
-    'packrats',
-    'futurists',
-    'celebrities',
-    'workaholics'
+    {
+      audience: 'cab drivers',
+      domain: 'cab'
+    },
+    {
+      audience: 'zoo animals',
+      domain: 'eco'
+    },
+    {
+      audience: 'the elderly',
+      domain: 'bargains'
+    },
+    {
+      audience: 'small children',
+      domain: 'kinder'
+    },
+    {
+      audience: 'dogs',
+      domain: 'dog'
+    },
+    {
+      audience: 'mormons',
+      domain: 'mormon'
+    },
+    {
+      audience: 'single parents',
+      domain: 'mom'
+    },
+    {
+      audience: 'lobbyists',
+      domain: 'consulting'
+    },
+    {
+      audience: 'newlyweds',
+      domain: 'wedding'
+    },
+    {
+      audience: 'hot singles in your area',
+      domain: 'dating'
+    },
+    {
+      audience: 'disruptors',
+      domain: 'ventures'
+    },
+    {
+      audience: 'the one percent',
+      domain: 'rich'
+    },
+    {
+      audience: 'vegans',
+      domain: 'farm'
+    },
+    {
+      audience: 'teenage CEOs',
+      domain: 'ceo'
+    },
+    {
+      audience: 'developers',
+      domain: 'codes'
+    },
+    {
+      audience: 'fitness enthusiasts',
+      domain: 'active'
+    },
+    {
+      audience: 'rural americans',
+      domain: 'country'
+    },
+    {
+      audience: 'lawyers',
+      domain: 'legal'
+    },
+    {
+      audience: 'journalists',
+      domain: 'press'
+    },
+    {
+      audience: 'B-List superheroes',
+      domain: 'ninja'
+    },
+    {
+      audience: 'the recently deceased',
+      domain: 'rip'
+    },
+    {
+      audience: 'the paranoid',
+      domain: 'secure'
+    },
+    {
+      audience: 'packrats',
+      domain: 'storage'
+    },
+    {
+      audience: 'futurists',
+      domain: 'technology'
+    },
+    {
+      audience: 'celebrities',
+      domain: 'vip'
+    },
+    {
+      audience: 'workaholics',
+      domain: 'work'
+    }
   ]
 };
 
@@ -151,8 +228,8 @@ export default {
     const suffixIndex = getNumber(0, suffix.length);
 
     return {
-      url: `${prefix[prefixIndex]}.${removeSpaces(audience[audienceIndex])}${removeSpaces(newIdea[ideaIndex])}.${suffix[suffixIndex]}`,
-      pitch: `It's ${techSite[techIndex]}, but ${newIdea[ideaIndex]} for ${audience[audienceIndex]}`
+      url: `${prefix[prefixIndex]}${suffix[suffixIndex]}.${audience[audienceIndex].domain}`,
+      pitch: `It's ${techSite[techIndex]}, but ${newIdea[ideaIndex]} for ${audience[audienceIndex].audience}`
     }
   }
 };
