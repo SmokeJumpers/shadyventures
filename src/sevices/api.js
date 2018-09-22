@@ -79,7 +79,7 @@ const pitchParts = {
     'like Tinder',
     'hard to use',
     'edible',
-    '100% local and organic',
+    'completely local and organic',
     'fluffy',
     'really slow',
     'a jukebox musical',
@@ -98,7 +98,6 @@ const pitchParts = {
   ],
 
   audience: [
-    'kids',
     'cab drivers',
     'zoo animals',
     'the elderly',
@@ -110,7 +109,7 @@ const pitchParts = {
     'newlyweds',
     'hot singles in your area',
     'disruptors',
-    'the 1%',
+    'the one percent',
     'vegans',
     'teenage CEOs',
     'developers',
@@ -128,31 +127,15 @@ const pitchParts = {
   ]
 };
 
-function getNumber(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min; 
-}
-
-function removeSpaces(string) {
-  return string.replace(/\s+/g,'');
-}
-
 export default {
   getPitch() {
     const { techSite, newIdea, audience } = pitchParts;
     const { prefix, suffix } = sites;
 
-    const techIndex = getNumber(0, techSite.length);
-    const ideaIndex = getNumber(0, newIdea.length);
-    const audienceIndex = getNumber(0, audience.length);
-
-    const prefixIndex = getNumber(0, prefix.length);
-    const suffixIndex = getNumber(0, suffix.length);
 
     return {
-      url: `${prefix[prefixIndex]}.${removeSpaces(audience[audienceIndex])}${removeSpaces(newIdea[ideaIndex])}.${suffix[suffixIndex]}`,
-      pitch: `It's ${techSite[techIndex]}, but ${newIdea[ideaIndex]} for ${audience[audienceIndex]}`
+      url: `${prefix[0]}.${audience[0]}${newIdea[0]}.${suffix[0]}`,
+      pitch: `It/'s ${techSite[0]}, but ${newIdea[0]} for  ${audience[0]}`
     }
   }
 };
