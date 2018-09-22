@@ -228,7 +228,7 @@ export default {
     const suffixIndex = getNumber(0, suffix.length);
 
     return {
-      url: `${prefix[prefixIndex]}${suffix[suffixIndex]}.${removeSpaces(audience[audienceIndex])}${removeSpaces(newIdea[ideaIndex])}.${audience[audienceIndex].domain}`,
+      url: `${prefix[prefixIndex]}${suffix[suffixIndex]}.${removeSpaces(audience[audienceIndex].audience)}${removeSpaces(newIdea[ideaIndex])}.${audience[audienceIndex].domain}`,
       pitch: `It's ${techSite[techIndex]}, but ${newIdea[ideaIndex]} for ${audience[audienceIndex].audience}`
     }
   }
