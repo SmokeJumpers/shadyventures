@@ -134,6 +134,10 @@ function getNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
 
+function removeSpaces(string) {
+  return string.replace(/\s+/g,'');
+}
+
 export default {
   getPitch() {
     const { techSite, newIdea, audience } = pitchParts;
@@ -147,8 +151,8 @@ export default {
     const suffixIndex = getNumber(0, suffix.length);
 
     return {
-      url: `${prefix[prefixIndex]}.${audience[audienceIndex]}${newIdea[ideaIndex]}.${suffix[suffixIndex]}`,
-      pitch: `It's ${techSite[techIndex]}, but ${newIdea[ideaIndex]} for  ${audience[audienceIndex]}`
+      url: `${prefix[prefixIndex]}.${removeSpaces(audience[audienceIndex])}${removeSpaces(newIdea[ideaIndex])}.${suffix[suffixIndex]}`,
+      pitch: `It's ${techSite[techIndex]}, but ${newIdea[ideaIndex]} for ${audience[audienceIndex]}`
     }
   }
 };
