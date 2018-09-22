@@ -32,4 +32,12 @@ export default {
   header {
     width: 100vw;
   }
+
+  header img {
+    width: 100%;
+  }
+
+  div h2, div p, div button {
+    margin: 0 auto;
+  }
 </style>
