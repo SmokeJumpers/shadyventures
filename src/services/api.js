@@ -79,7 +79,7 @@ const pitchParts = {
     'like Tinder',
     'hard to use',
     'edible',
-    '100% local and organic',
+    'completely local and organic',
     'fluffy',
     'really slow',
     'a jukebox musical',
@@ -143,7 +143,7 @@ const pitchParts = {
       domain: 'ventures'
     },
     {
-      audience: 'the 1%',
+      audience: 'the one percent',
       domain: 'rich'
     },
     {
