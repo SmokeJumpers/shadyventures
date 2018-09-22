@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+      <img class="banner" src="https://pre00.deviantart.net/856e/th/pre/f/2012/263/3/e/3ececa154d5e33543bac7947aba5dad6-d5fc6os.jpg" alt="Handshake with the Devil Banner">
+      <h1>Hazy Ventures</h1>
+    </header>
+    <button @click="handleSubmit">Generate Your Shady Busniess Idea</button>
+    <h2 v-if="pitch">Your website is: {{ pitch.url }}</h2>
+    <h3 v-if="pitch"> Your pitch is: {{ pitch.pitch }}</h3>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import api from './services/api.js';
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      pitch: null
+    };
+  },
+  methods: {
+    handleSubmit() {
+      this.pitch = api.getPitch();
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  header {
+    width: 100vw;
+  }
+
+  header img {
+    width: 100%;
+  }
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  h3 {
+    margin-bottom: 50px;
+  }
 </style>
